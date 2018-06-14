@@ -17,15 +17,15 @@ csharp:
   clear-output-folder: true
 ```
 
-``` yaml $(csharp) && !$(multiApi)
+``` yaml $(csharp) && !$(multiapi)
 namespace: Microsoft.Azure.Management.Subscription
 output-folder: $(csharp-sdks-folder)/Subscription/Management.Subscription/Generated
 ```
 
 ## Batch settings
-These settings are for batch mode only: (ie, add `--MultiApi` to the command line )
+These settings are for batch mode only: (ie, add `--multiapi` to the command line )
 
-``` yaml $(multiApi)
+``` yaml $(multiapi)
 namespace: Microsoft.Azure.Management.Subscription.$(ApiVersionName)
 output-folder: $(csharp-sdks-folder)/$(ApiVersionName)/Generated
 
