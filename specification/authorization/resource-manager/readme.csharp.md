@@ -26,12 +26,14 @@ output-folder: $(csharp-sdks-folder)/Authorization/Management.Authorization/Gene
 These settings are for batch mode only: (ie, add `--multiapi` to the command line )
 
 ``` yaml $(multiapi)
-namespace: Microsoft.Azure.Management.Authorization.$(ApiVersionName)
+#namespace: Microsoft.Azure.Management.Authorization.$(ApiVersionName)
+namespace: Microsoft.Azure.Management.$(ProfileName).Authorization
 output-folder: $(csharp-sdks-folder)/$(ApiVersionName)/Generated
 
 batch:
 - tag: package-2015-07-AzStk
   ApiVersionName: Api2015_07_01
+  ProfileName: Hybrid_2018_03_01
 #- tag: package-2017-10-AzStk
 #  ApiVersionName: Api2017_10_01
 ```
